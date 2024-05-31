@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Battle Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Pokémon Battle Simulator</h1>
+        <form action="/result" method="POST">
+            <label for="pokemon1">Enter Pokémon 1 ID:</label>
+            <input type="number" id="pokemon1" name="pokemon1" required>
+            <label for="pokemon2">Enter Pokémon 2 ID:</label>
+            <input type="number" id="pokemon2" name="pokemon2" required>
+            <button type="submit">Fight!</button>
+        </form>
+        <a href="/search">Search Pokémon ID by Name</a>
+    </div>
+</body>
+</html>

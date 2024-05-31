@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Battle Result</h1>
+        <div class="battle">
+            <div class="pokemon">
+                <img src="{{ pokemon1_image }}" alt="{{ pokemon1_name }}">
+                <h2>{{ pokemon1_name }} Stats</h2>
+                <img src="{{ url_for('static', filename=pokemon1_stats_img) }}" alt="{{ pokemon1_name }} Stats">
+            </div>
+            <div class="pokemon">
+                <img src="{{ pokemon2_image }}" alt="{{ pokemon2_name }}">
+                <h2>{{ pokemon2_name }} Stats</h2>
+                <img src="{{ url_for('static', filename=pokemon2_stats_img) }}" alt="{{ pokemon2_name }} Stats">
+            </div>
+        </div>
+        <h2>{{ result }}</h2>
+        <a href="/home">Battle Again</a>
+    </div>
+</body>
+</html>
