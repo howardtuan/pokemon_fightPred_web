@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Battle Simulator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Pokémon Battle Simulator</h1>
+    <form id="fightForm" action="/NameToID" method="POST">
+        <div class="autocomplete">
+            <label for="pokemonInput1">Enter Pokémon 1 Name:</label>
+            <input id="pokemonInput1" name="pokemon1" type="text" placeholder="Enter first Pokémon name" required>
+        </div>
+        <div class="autocomplete">
+            <label for="pokemonInput2">Enter Pokémon 2 Name:</label>
+            <input id="pokemonInput2" name="pokemon2" type="text" placeholder="Enter second Pokémon name" required>
+        </div>
+        <button type="button" onclick="handleFight()">Fight!</button>
+    </form>
+    <a href="/index">Back</a>
+</div>
+
+<!-- <form id="fightForm" action="/resultTest" method="POST">
+  <div class="autocomplete">
+    <input id="pokemonInput1" name="pokemon1" type="text" placeholder="Enter first Pokémon name">
+  </div>
+  <div class="autocomplete">
+    <input id="pokemonInput2" name="pokemon2" type="text" placeholder="Enter second Pokémon name">
+  </div>
+  <button type="button" onclick="handleFight()">Fight</button>
+</form> -->
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
