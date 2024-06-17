@@ -11,7 +11,7 @@
 </pre>
 #### 二、下載套件
 <pre>
-  pip3 install -r requirement.txt
+  pip3 install -r requirements.txt
 </pre>
 #### 三、啟動Server
 ##### 進入與app.py同層的資料夾
