@@ -109,5 +109,5 @@ def search():
             return render_template('search_result.html', name=name, pokemon_id=None)
     return render_template('search.html')
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=10000)
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=5000)
